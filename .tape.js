@@ -1,15 +1,4 @@
 module.exports = {
-	'nested-fallback': {
-		message: 'supports nested fallback',
-		options: {
-			preserve: true,
-			importFrom: {
-				customProperties: {
-					'--spacing-xs': '8px'
-				}
-			}
-		}
-	},
 	'basic': {
 		message: 'supports basic usage'
 	},
@@ -276,6 +265,29 @@ module.exports = {
 		message: 'supports { importFrom: {} } usage',
 		options: {
 			importFrom: {}
+		}
+	},
+	'nested-fallback': {
+		message: 'supports nested fallback',
+		options: {
+			importFrom: {
+				customProperties: {
+					'--spacing-xs': '8px',
+					'--spacing-sm': '12px'
+				}
+			}
+		}
+	},
+	'nested-fallback.preserve': {
+		message: 'supports nested fallback { preserve: false } usage',
+		options: {
+			preserve: false,
+			importFrom: {
+				customProperties: {
+					'--spacing-xs': '8px',
+					'--spacing-sm': '12px'
+				}
+			}
 		}
 	}
 };
