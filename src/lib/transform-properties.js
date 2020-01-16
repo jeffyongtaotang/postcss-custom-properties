@@ -26,7 +26,7 @@ function transform (root, customProperties, opts, decl) {
 					beforeDecl.raws.value.raw = beforeDecl.raws.value.value + beforeDecl.raws.value.raw.replace(trailingCommentRegExp, '$2');
 				}
 
-				transform(root, customProperties, opts, beforeDecl);
+				transform(root, customProperties, opts, beforeDecl);	
 
 			} else {
 				decl.value = value;
@@ -35,6 +35,8 @@ function transform (root, customProperties, opts, decl) {
 					decl.raws.value.value = decl.value.replace(trailingCommentRegExp, '$1');
 					decl.raws.value.raw = decl.raws.value.value + decl.raws.value.raw.replace(trailingCommentRegExp, '$2');
 				}
+
+				transform(root, customProperties, opts, decl);
 			}
 		}
 	}
